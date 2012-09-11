@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <script src="/js/jquery/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="/js/jquery/jquery-ui-1.8.18.custom.min.js" type="text/javascript"></script>
+    <script src="/js/index.js" type="text/javascript"></script>
+    <link type="text/css" rel="stylesheet" href="/css/main.css" />
+    <link type="text/css" rel="stylesheet" href="/css/jquery-ui-1.8.23.custom.css" />
+    <title>whatitworths</title>
+  </head>
+  <body>
+  <div id="fb-root"></div>
+    <script>
+      var me = <%-JSON.stringify(me)%>;
+      var imagePath = "<%= GLOBAL.globalConfig.image_path %>";
+      var namespace = "<%= GLOBAL.globalConfig.facebook.name_space %>";
+      var appUrl = "<%= GLOBAL.globalConfig.app_url %>";
+
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : "<%= GLOBAL.globalConfig.facebook.app_id %>",
+          channelUrl : "<%= GLOBAL.globalConfig.app_url %>/channel",
+          status     : true,
+          cookie     : true,
+          xfbml      : true,
+          frictionlessRequests: true
+        });
+      };
+
+      // Load the SDK Asynchronously
+      (function(d){
+         var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement('script'); js.id = id; js.async = true;
+         js.src = "//connect.facebook.net/en_US/all.js";
+         ref.parentNode.insertBefore(js, ref);
+       }(document));
+    </script>
+    <h3>What It Worths</h3>
+    <div>
+      <input type="text" class="search"/>
+    </div>
+    <div class='result'></div>
+  </body>
+</html>

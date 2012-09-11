@@ -1,0 +1,15 @@
+{
+  "name": "whatitworths",
+  "version": "0.0.1",
+  "dependencies": {
+    "ejs": "0.8.x",
+    "express": "3.0.x",
+    "konphyg": "1.0.x",
+    "fb": "0.0.x",
+    "solr":"0.2.x"
+  },
+  "engines": {
+    "node" : "0.8.x",
+    "npm" : "1.1.x"
+  }
+}

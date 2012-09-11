@@ -1,0 +1,26 @@
+html, body {
+	background-color: #EFEFEF;
+	height: 100%;
+}
+
+.hidden {
+	display: none;
+}
+
+.horizontal,.icon.horizontal {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.nopadmad {
+	margin: 0px;
+	padding: 0px;
+}
+
+.button {
+	padding: 3px;
+	margin: 3px;
+	color: blue;
+	cursor: pointer;
+	border: dotted 1px blue;
+}
